@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Management System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Employee List</h1>
+    <ul>
+        {% for employee in employees %}
+            <li>
+                Name: {{ employee[1] }}<br>
+                Salary: {{ employee[2] }}<br>
+                Position: {{ employee[3] }}<br>
+                Email: {{ employee[4] }}<br>
+                Phone: {{ employee[5] }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
